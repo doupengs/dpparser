@@ -5,6 +5,8 @@ import datetime
 from lxml import etree
 from dplog.dplog import Logger
 
+__version__ = '0.0.1'
+
 
 class Parser(object):
     """
