@@ -12,16 +12,22 @@ class Parser(object):
     """
     :class: html parser
     """
-    def __init__(self, data=None, response=None, url=None):
+    def __init__(self, data=None, response=None, url=None, encoding='utf-8'):
         """
         :param data: response.text
         :param response: response
         :param url: url
+        :param encoding: response.encoding
         """
-        self.data = data
-        self.response = response
         try:
-            self.url = response.request.url if response and not url else url
+            self.data = data
+            self.url = url
+            if response is not None:
+                if data is None:
+                    response.encoding = encoding
+                    self.data = response.text
+                if url is None:
+                    self.url = response.request.url
             self.__html = etree.HTML(self.data) if data else None
         except Exception as e:
             Logger.error(e)
