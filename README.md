@@ -54,4 +54,12 @@ root.datetime(timeStrFormat="%Y-%m-%d %H:%M:%S", returnStrType=True)
 
 - 具体使用参看[示例](https://github.com/doupengs/dpparser/blob/master/test.py)
 
+## 安装
 
+#### 依赖的库
+
+* lxml
+     * pip install lxml
+* dplog
+     * [下载](https://github.com/doupengs/dplog/tree/master/dist)
+     * pip install dplog-x.x.x.tar.gz
