@@ -29,7 +29,7 @@ setup(
     platforms=["Linux", "Windows"],
     install_requires=[
             'lxml',
-            'dplog',
+            'dplog>=0.0.3',
         ],
     classifiers=[
         "Programming Language :: Python :: 2",
